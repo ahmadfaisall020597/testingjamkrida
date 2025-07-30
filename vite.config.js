@@ -16,7 +16,7 @@ export default defineConfig(({
 	dotenv.config({ path: `.env.${mode}` });
 
 	return {
-		base: '/testingjamkrida/',
+		base: '/',
 		assetsInclude: ['**/*.docx'],
 		plugins: [
 			react(),
