@@ -36,33 +36,38 @@ const DashboardPageMitra = () => {
 		fnGetForceNotif();
 
 		const script = document.createElement("script");
-		script.src = "https://embed.tawk.to/68898e8228cbba1927608cad/1j1cl9bhl"; // ID Anda
+		script.src = "https://embed.tawk.to/68898e8228cbba1927608cad/1j1cl9bhl";
 		script.async = true;
 		script.charset = "UTF-8";
 		script.setAttribute("crossorigin", "*");
 		document.body.appendChild(script);
 
-		// Tunggu sampai widget tersedia lalu daftarkan event listener
+		// Setelah script dimuat, inject style supaya tidak fullscreen
 		script.onload = () => {
-			if (window.Tawk_API) {
-				window.Tawk_API.onChatStarted = () => {
-					console.log("🔵 Chat dimulai.");
-				};
+			const style = document.createElement("style");
+			style.innerHTML = `
+        #tawkchat-container {
+          width: auto !important;
+          height: auto !important;
+          max-width: 350px !important;
+          max-height: 500px !important;
+          bottom: 20px !important;
+          right: 20px !important;
+          border-radius: 16px !important;
+          overflow: hidden !important;
+          z-index: 9999 !important;
+        }
 
-				window.Tawk_API.onChatMessageVisitor = (message) => {
-					console.log("💬 Pesan dari visitor:", message);
-				};
-
-				window.Tawk_API.onChatMessageAgent = (message) => {
-					console.log("🟢 Pesan dari admin:", message);
-				};
-
-				window.Tawk_API.onChatEnded = () => {
-					console.log("🔴 Chat berakhir.");
-				};
-			}
+        #tawkchat-minimized {
+          bottom: 20px !important;
+          right: 20px !important;
+          z-index: 10000 !important;
+        }
+      `;
+			document.head.appendChild(style);
 		};
 
+		// Optional: cleanup saat unmount
 		return () => {
 			document.body.removeChild(script);
 		};
@@ -111,7 +116,7 @@ const DashboardPageMitra = () => {
 				</div>
 			</CardComponent>
 
-			{/* <Button
+			<Button
 				variant="primary"
 				onClick={toggleChat}
 				className="d-flex align-items-center gap-2"
@@ -126,8 +131,8 @@ const DashboardPageMitra = () => {
 				}}
 			>
 				<i className="bi bi-chat-dots-fill fs-4" />
-				<span className="text-white fw-bold">Live Chat</span>
-			</Button> */}
+				{/* <span className="text-white fw-bold">Live Chat</span> */}
+			</Button>
 
 			<Modal show={show && count > 0}>
 				<Modal.Header>
