@@ -10,6 +10,7 @@
     "prepare-env-prd": "cp .env.prd .env",
     "dev": "vite --host --mode dev",
     "clean-dev": "rm -rf node_modules/.vite/ && vite --port 5173 --force --host --mode dev",
+    "build": "vite build",
     "build-dev": "npm run prepare-env-dev && vite build --mode dev",
     "build-qa": "npm run prepare-env-qa && vite build --mode qa",
     "build-prd": "npm run prepare-env-prd && vite build --mode prd",
