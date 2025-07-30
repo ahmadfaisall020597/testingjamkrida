@@ -111,7 +111,7 @@ const DashboardPageMitra = () => {
 				</div>
 			</CardComponent>
 
-			<Button
+			{/* <Button
 				variant="primary"
 				onClick={toggleChat}
 				className="d-flex align-items-center gap-2"
@@ -127,7 +127,7 @@ const DashboardPageMitra = () => {
 			>
 				<i className="bi bi-chat-dots-fill fs-4" />
 				<span className="text-white fw-bold">Live Chat</span>
-			</Button>
+			</Button> */}
 
 			<Modal show={show && count > 0}>
 				<Modal.Header>
