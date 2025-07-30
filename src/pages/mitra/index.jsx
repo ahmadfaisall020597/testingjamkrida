@@ -42,32 +42,25 @@ const DashboardPageMitra = () => {
 		script.setAttribute("crossorigin", "*");
 		document.body.appendChild(script);
 
-		// Setelah script dimuat, inject style supaya tidak fullscreen
 		script.onload = () => {
-			const style = document.createElement("style");
-			style.innerHTML = `
-        #tawkchat-container {
-          width: auto !important;
-          height: auto !important;
-          max-width: 350px !important;
-          max-height: 500px !important;
-          bottom: 20px !important;
-          right: 20px !important;
-          border-radius: 16px !important;
-          overflow: hidden !important;
-          z-index: 9999 !important;
-        }
+			// Polling untuk menunggu elemen muncul
+			const interval = setInterval(() => {
+				const chatContainer = document.querySelector("#tawkchat-container");
+				if (chatContainer) {
+					chatContainer.style.maxWidth = "350px";
+					chatContainer.style.maxHeight = "500px";
+					chatContainer.style.bottom = "20px";
+					chatContainer.style.right = "20px";
+					chatContainer.style.borderRadius = "16px";
+					chatContainer.style.overflow = "hidden";
+					chatContainer.style.zIndex = "9999";
 
-        #tawkchat-minimized {
-          bottom: 20px !important;
-          right: 20px !important;
-          z-index: 10000 !important;
-        }
-      `;
-			document.head.appendChild(style);
+					clearInterval(interval); // Stop polling setelah sukses
+				}
+			}, 500); // Cek setiap 500ms
 		};
 
-		// Optional: cleanup saat unmount
+		// Cleanup
 		return () => {
 			document.body.removeChild(script);
 		};
