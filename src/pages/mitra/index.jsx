@@ -33,8 +33,6 @@ const DashboardPageMitra = () => {
 	};
 
 	useEffect(() => {
-		fnGetForceNotif();
-
 		const script = document.createElement("script");
 		script.src = "https://embed.tawk.to/68898e8228cbba1927608cad/1j1cl9bhl";
 		script.async = true;
@@ -42,47 +40,38 @@ const DashboardPageMitra = () => {
 		script.setAttribute("crossorigin", "*");
 
 		script.onload = () => {
-			console.log("✅ Script Tawk.to berhasil dimuat");
+			console.log("Tawk.to script loaded");
 
-			let counter = 0;
-			const interval = setInterval(() => {
-				const iframe = document.querySelector("iframe[src*='tawk.to']");
-				if (iframe && iframe.parentElement) {
-					console.log("✅ iframe Tawk.to ditemukan");
+			if (window.Tawk_API) {
+				// Tunggu hingga widget selesai dimuat
+				window.Tawk_API.onLoad = function () {
+					console.log("Tawk.to widget loaded");
 
-					const container = iframe.parentElement;
-					container.style.maxWidth = "350px";
-					container.style.maxHeight = "500px";
-					container.style.bottom = "20px";
-					container.style.right = "20px";
-					container.style.borderRadius = "16px";
-					container.style.overflow = "hidden";
-					container.style.zIndex = "9999";
-
-					clearInterval(interval); // Stop polling
-				} else {
-					console.log(`⏳ Menunggu iframe Tawk.to... (${counter + 1})`);
-				}
-
-				counter++;
-				if (counter > 20) {
-					console.warn("⚠️ Gagal menemukan iframe Tawk.to setelah 10 detik");
-					clearInterval(interval);
-				}
-			}, 500);
-		};
-
-		script.onerror = () => {
-			console.error("❌ Gagal memuat script Tawk.to");
+					if (dataLogin?.data?.name && dataLogin?.data?.email) {
+						window.Tawk_API.setAttributes(
+							{
+								name: dataLogin.data.name,
+								email: dataLogin.data.email,
+							},
+							function (error) {
+								if (error) {
+									console.error("Tawk setAttributes error:", error);
+								} else {
+									console.log("Tawk.to visitor info set:", dataLogin.data.name);
+								}
+							}
+						);
+					}
+				};
+			}
 		};
 
 		document.body.appendChild(script);
 
 		return () => {
 			document.body.removeChild(script);
-			console.log("🧹 Script Tawk.to dihapus");
 		};
-	}, []);
+	}, [dataLogin]);
 
 	const handleClose = () => {
 		localStorage.setItem("showPopUpNotif", false);
