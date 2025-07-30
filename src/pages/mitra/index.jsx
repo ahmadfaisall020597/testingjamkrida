@@ -36,11 +36,32 @@ const DashboardPageMitra = () => {
 		fnGetForceNotif();
 
 		const script = document.createElement("script");
-		script.src = "https://embed.tawk.to/68898e8228cbba1927608cad/1j1cl9bhl";
+		script.src = "https://embed.tawk.to/68898e8228cbba1927608cad/1j1cl9bhl"; // ID Anda
 		script.async = true;
 		script.charset = "UTF-8";
 		script.setAttribute("crossorigin", "*");
 		document.body.appendChild(script);
+
+		// Tunggu sampai widget tersedia lalu daftarkan event listener
+		script.onload = () => {
+			if (window.Tawk_API) {
+				window.Tawk_API.onChatStarted = () => {
+					console.log("🔵 Chat dimulai.");
+				};
+
+				window.Tawk_API.onChatMessageVisitor = (message) => {
+					console.log("💬 Pesan dari visitor:", message);
+				};
+
+				window.Tawk_API.onChatMessageAgent = (message) => {
+					console.log("🟢 Pesan dari admin:", message);
+				};
+
+				window.Tawk_API.onChatEnded = () => {
+					console.log("🔴 Chat berakhir.");
+				};
+			}
+		};
 
 		return () => {
 			document.body.removeChild(script);
