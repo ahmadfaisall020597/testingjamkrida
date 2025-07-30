@@ -64,7 +64,9 @@ const routerEntries = [
 	}
 ];
 
-export const router = createBrowserRouter(routerEntries);
+export const router = createBrowserRouter(routerEntries, {
+	basename: "/testingjamkrida"
+});
 
 export const History = {
 	navigate: null,
