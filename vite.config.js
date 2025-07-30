@@ -12,17 +12,19 @@ dotenv.config();
 // https://vite.dev/config/
 export default defineConfig(({
 	mode
-})=>{
+}) => {
 	dotenv.config({ path: `.env.${mode}` });
-	
+
 	return {
+		base: '/testingjamkrida/',
 		assetsInclude: ['**/*.docx'],
 		plugins: [
 			react(),
 			VitePWA({
 				registerType: 'autoUpdate',
 				workbox: {
-					globPatterns: ['**/*.{js,css,html,ico,png}']
+					globPatterns: ['**/*.{js,css,html,ico,png}'],
+					maximumFileSizeToCacheInBytes: 5 * 1024 * 1024,
 				}
 			}),
 			ViteImagemin({
@@ -34,7 +36,7 @@ export default defineConfig(({
 				webp: { quality: 75 }
 			}),
 		],
-		define:{
+		define: {
 			'process.env': {
 				VITE_FIREBASE_KEY: process.env.VITE_FIREBASE_KEY,
 				VITE_FIREBASE_AUTH_DOMAIN: process.env.VITE_FIREBASE_AUTH_DOMAIN,
