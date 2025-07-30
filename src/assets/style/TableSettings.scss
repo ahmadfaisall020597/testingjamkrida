@@ -1,0 +1,89 @@
+.checkbox-table-container {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.bg-gradient-primary {
+  background: linear-gradient(135deg, #0d6efd 0%, #0056b3 100%);
+}
+
+.bg-gradient-success {
+  background: linear-gradient(135deg, #198754 0%, #146c43 100%);
+}
+
+.bg-gradient-danger {
+  background: linear-gradient(135deg, #e43535 0%, #a11919 100%);
+}
+
+.modern-table {
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+.table-row-hover:hover {
+  background-color: #f8f9fa !important;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.selected-row {
+  background-color: #e8f4fd !important;
+  box-shadow: inset 0 0 0 1px #0d6efd;
+}
+
+.selected-row-multi {
+  background-color: #e8f5e8 !important;
+  box-shadow: inset 0 0 0 1px #198754;
+}
+
+.selected-indicator {
+  animation: bounceIn 0.3s ease;
+}
+
+@keyframes bounceIn {
+  0% { transform: scale(0.3); opacity: 0; }
+  50% { transform: scale(1.05); opacity: 1; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+.custom-checkbox .form-check-input:checked {
+  background-color: #198754;
+  border-color: #198754;
+}
+
+.empty-state {
+  padding: 2rem;
+  opacity: 0.7;
+}
+
+.card {
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.card-header {
+  border-bottom: none;
+  padding: 1rem 1.5rem;
+}
+
+.item-content {
+  flex: 1;
+}
+
+/* Scrollbar Styling */
+.table-responsive::-webkit-scrollbar {
+  width: 6px;
+}
+
+.table-responsive::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+.table-responsive::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 10px;
+}
+
+.table-responsive::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}

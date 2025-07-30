@@ -1,0 +1,89 @@
+/* Dashboard Custom Styles */
+#dashboard-page-portal-admin {
+  background-color: #f8f9fa;
+  min-height: 100vh;
+}
+
+.bg-gradient-primary {
+  background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
+}
+
+.stat-card {
+  transition: all 0.3s ease;
+  border-left: 4px solid transparent;
+}
+
+.stat-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15) !important;
+  border-left-color: var(--bs-primary);
+}
+
+.stat-icon {
+  width: 60px;
+  height: 60px;
+  flex-shrink: 0;
+}
+
+.action-card {
+  transition: all 0.3s ease;
+}
+
+.action-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15) !important;
+}
+
+.action-icon {
+  width: 50px;
+  height: 50px;
+  flex-shrink: 0;
+}
+
+.welcome-section {
+  border-radius: 15px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .stat-icon {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .action-icon {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .welcome-section {
+    text-align: center;
+  }
+}
+
+/* Card animations */
+.card {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Progress bar styling */
+.progress {
+  border-radius: 10px;
+}
+
+/* Badge styling */
+.badge {
+  font-size: 0.75em;
+  padding: 0.5em 0.75em;
+}

@@ -1,0 +1,13 @@
+#breadcrumbs{
+  padding-top: .40rem;
+  padding-bottom: .40rem;
+  background-color: $warning2;
+
+  .breadcrumb{
+    margin: 0;
+    .breadcrumb-item a{
+      color: $black;
+      font-weight: 600;
+    }
+  }
+}

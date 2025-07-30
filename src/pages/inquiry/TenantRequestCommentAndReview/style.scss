@@ -1,0 +1,10 @@
+@import "src/assets/style/variable.scss";
+
+#rate-request-page{
+  .tenant-label{
+    color: $gray2-text;
+  }
+  .header-title{
+    background-color: $gray2;
+  }
+}

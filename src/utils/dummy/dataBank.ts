@@ -1,0 +1,46 @@
+export const dataBank = [
+	{ bank_code: "002", nama_bank: "Bank Rakyat Indonesia", singkatan: "BRI", kode_transfer: "002" },
+	{ bank_code: "008", nama_bank: "Bank Mandiri", singkatan: "Mandiri", kode_transfer: "008" },
+	{ bank_code: "009", nama_bank: "Bank Negara Indonesia", singkatan: "BNI", kode_transfer: "009" },
+	{ bank_code: "011", nama_bank: "Bank Tabungan Negara", singkatan: "BTN", kode_transfer: "011" },
+
+	{ bank_code: "014", nama_bank: "Bank Central Asia", singkatan: "BCA", kode_transfer: "014" },
+	{ bank_code: "028", nama_bank: "Bank OCBC NISP", singkatan: "OCBC NISP", kode_transfer: "028" },
+	{ bank_code: "013", nama_bank: "Bank Permata", singkatan: "Permata", kode_transfer: "013" },
+	{ bank_code: "016", nama_bank: "Bank Maybank Indonesia", singkatan: "Maybank", kode_transfer: "016" },
+	{ bank_code: "426", nama_bank: "Bank Mega", singkatan: "Mega", kode_transfer: "426" },
+	{ bank_code: "441", nama_bank: "Bank Bukopin", singkatan: "Bukopin", kode_transfer: "441" },
+	{ bank_code: "022", nama_bank: "Bank CIMB Niaga", singkatan: "CIMB Niaga", kode_transfer: "022" },
+	{ bank_code: "036", nama_bank: "Bank Danamon", singkatan: "Danamon", kode_transfer: "011" },
+	{ bank_code: "213", nama_bank: "Bank Tabungan Pensiunan Nasional", singkatan: "BTPN", kode_transfer: "213" },
+	{ bank_code: "425", nama_bank: "Bank BCA Syariah", singkatan: "BCA Syariah", kode_transfer: "536" },
+
+	{ bank_code: "422", nama_bank: "Bank Syariah Indonesia", singkatan: "BSI", kode_transfer: "451" },
+	{ bank_code: "427", nama_bank: "Bank Syariah Bukopin", singkatan: "BSB", kode_transfer: "" },
+	{ bank_code: "517", nama_bank: "Bank Panin Dubai Syariah", singkatan: "Panin Syariah", kode_transfer: "" },
+	{ bank_code: "521", nama_bank: "Bank Muamalat Indonesia", singkatan: "Muamalat", kode_transfer: "147" },
+	{ bank_code: "542", nama_bank: "Bank Victoria Syariah", singkatan: "Victoria Syariah", kode_transfer: "405" },
+
+	{ bank_code: "110", nama_bank: "Bank Jabar Banten", singkatan: "BJB", kode_transfer: "110" },
+	{ bank_code: "113", nama_bank: "Bank Jateng", singkatan: "Bank Jateng", kode_transfer: "113" },
+	{ bank_code: "114", nama_bank: "Bank Jatim", singkatan: "Bank Jatim", kode_transfer: "114" },
+	{ bank_code: "115", nama_bank: "Bank Aceh", singkatan: "Bank Aceh", kode_transfer: "116" },
+	{ bank_code: "116", nama_bank: "Bank Sumut", singkatan: "Sumut", kode_transfer: "117" },
+	{ bank_code: "117", nama_bank: "Bank Nagari", singkatan: "Nagari", kode_transfer: "118" },
+	{ bank_code: "118", nama_bank: "Bank Riau Kepri", singkatan: "Riau Kepri", kode_transfer: "119" },
+	{ bank_code: "119", nama_bank: "Bank Sumsel Babel", singkatan: "Sumsel Babel", kode_transfer: "120" },
+	{ bank_code: "120", nama_bank: "Bank Lampung", singkatan: "Lampung", kode_transfer: "121" },
+	{ bank_code: "121", nama_bank: "Bank DKI", singkatan: "DKI", kode_transfer: "111" },
+
+	{ bank_code: "031", nama_bank: "Citibank", singkatan: "Citibank", kode_transfer: "031" },
+	{ bank_code: "030", nama_bank: "Bank DBS Indonesia", singkatan: "DBS", kode_transfer: "046" },
+	{ bank_code: "040", nama_bank: "Bank HSBC Indonesia", singkatan: "HSBC", kode_transfer: "041" },
+	{ bank_code: "067", nama_bank: "Bank of China", singkatan: "BoC", kode_transfer: "069" },
+	{ bank_code: "145", nama_bank: "Bank UOB Indonesia", singkatan: "UOB", kode_transfer: "023" },
+
+	{ bank_code: "490", nama_bank: "Bank Jago", singkatan: "Jago", kode_transfer: "542" },
+	{ bank_code: "959", nama_bank: "Bank Neo Commerce", singkatan: "Neo Commerce", kode_transfer: "490" },
+	{ bank_code: "517", nama_bank: "PT Bank Digital BCA", singkatan: "blu", kode_transfer: "501" },
+	{ bank_code: "028", nama_bank: "PT Bank Commonwealth", singkatan: "Commonwealth", kode_transfer: "950" },
+	{ bank_code: "028", nama_bank: "PT Bank Amar", singkatan: "Amar", kode_transfer: "950" }
+];

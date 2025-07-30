@@ -1,0 +1,13 @@
+@import "src/assets/style/variable.scss";
+
+#edit-request-transaction-page{
+  .bg-header{
+    background-color: $gray9;
+  }
+  .header-title-status{
+    background-color: $secondary;
+  }
+  .header-subtitle-status{
+    color: $gray10;
+  }
+}

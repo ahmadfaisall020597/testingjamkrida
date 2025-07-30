@@ -1,0 +1,98 @@
+[
+	{
+		"path": "/master-page/product",
+		"privileges": "CRUD"
+	},
+	{
+		"path": "/master-page/package-product",
+		"privileges": "CRUD"
+	},
+	{
+		"path": "/master-page/promo-product",
+		"privileges": "CRUD"
+	},
+	{
+		"path": "/master-page/tenant",
+		"privileges": "CRUD"
+	},
+	{
+		"path": "/master-page/room",
+		"privileges": "CRUD"
+	},
+	{
+		"path": "/master-page/lookup-value",
+		"privileges": "CRUD"
+	},
+	{
+		"path": "/master-page/one-time-setup",
+		"privileges": "CRUD"
+	},
+	{
+		"path": "/test-parent",
+		"privileges": "R"
+	},
+	{
+		"path": "/register-mitra",
+		"privileges": "R"
+	},
+	{
+		"path": "/mitra/penjaminan-mitra",
+		"privileges": "R"
+	},
+	{
+		"path": "/mitra/penjaminan-mitra/create",
+		"privileges": "CRUD"
+	},
+	{
+		"path": "/mitra/penjaminan-mitra/detail",
+		"privileges": "R"
+	},
+	{
+		"path": "/mitra/penjaminan-mitra/upload",
+		"privileges": "CRUD"
+	},
+	{
+		"path": "/dashboard-admin",
+		"privileges": "R"
+	},
+	{
+		"path": "/dashboard-mitra",
+		"privileges": "R"
+	},
+	{
+		"path": "/mitra/claim",
+		"privileges": "CRUD"
+	},
+	{
+		"path": "/mitra/claim/upload",
+		"privileges": "CRUD"
+	},
+	{
+		"path": "/mitra/subrogasi",
+		"privileges": "CRUD"
+	},
+	{
+		"path": "/portal-admin/user-mitra/create",
+		"privileges": "CRUD"
+	},
+	{
+		"path": "/portal-admin/user-mitra/edit",
+		"privileges": "U"
+	},
+	{
+		"path": "/portal-admin/user-mitra/upload-excel",
+		"privileges": "CRUD"
+	},
+	{
+		"path": "/mitra/notification",
+		"privileges": "R"
+	},
+	{
+		"path": "/subrogasi/detail",
+		"privileges": "R"
+	},
+	{ 
+    "path": "/mitra/claim/banding", 
+    "privileges": "CRUD" 
+  }
+]

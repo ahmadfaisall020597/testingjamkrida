@@ -1,0 +1,293 @@
+
+@import "./variable.scss";
+
+@import "bootstrap/scss/bootstrap";
+
+// Ganti font default Bootstrap
+$font-family-sans-serif: "Plus Jakarta Sans", sans-serif;
+
+// Gunakan font baru untuk semua elemen
+body {
+  font-family: $font-family-sans-serif !important;
+}
+
+@import "./header.scss";
+
+@import "./breadcrumbs.scss";
+
+@import "./sidebar.scss";
+
+@import "./dashboard.scss";
+
+@import "./MaintenancePage.scss";
+
+@import "./TableSettings.scss";
+
+::-webkit-scrollbar {
+	width: 7px;
+	height: 7px;
+}
+
+::-webkit-scrollbar-track {
+	-webkit-box-shadow: inset 0 0 12px $gray2;
+	border-radius: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+	border-radius: 12px;
+	/* background-color:#fff; */
+	-webkit-box-shadow: inset 0 0 12px #B1B1B1;
+}
+.loading-spinner{
+  position: absolute; 
+  top: 50%; 
+  left: 50%; 
+  transform: translate(-50%, -50%);
+}
+.form-control, .form-check-input, .form-select {
+  &:focus{
+    box-shadow: none;
+  }
+  option:disabled{
+    display: none;
+  }
+}
+.form-switch{
+  .form-check-input{
+    margin-top: 9px !important;
+  }
+}
+.rdt_Table{
+  border-radius: $border-radius;
+  .rdt_TableHead{
+    font-size: $font-size-base;
+    border-radius: $border-radius;
+    
+  }
+  .rdt_TableHeadRow{
+    background-color: $secondary;
+    border-radius: $border-radius;
+    color: $white;
+  }
+  .rdt_TableCol{
+    border-right: 1px solid $white;
+    border-top: 0;
+    border-bottom:0;
+    justify-content: space-between;
+    &:last-child{
+      border-right: 0;
+    }
+  }
+  .rdt_TableCell{
+    font-size: $font-size-base;
+    div:first-child{
+      white-space: normal;
+      // text-align: center;
+    }
+  }
+  .rdt_TableRow{
+    border-bottom: 2px solid $white !important;
+    border-radius: $border-radius;
+    font-weight: $font-weight-base;
+    &:nth-child(odd){
+      background-color: #F1F1F1;
+    }
+    &:nth-child(even){
+      background-color: #E3E3E3;
+    }
+  }
+  .rdt_TableCol_Sortable{
+    div:first-child{
+      white-space: normal;
+    }
+  }
+}
+.rdt_Pagination{
+  border-top: 1px solid $white !important;
+}
+:root{
+  --toastify-color-progress-light:#4f3d3b;
+}
+
+.fs-7{
+  font-size: $font-size-base * 0.8;
+}
+
+.fs-8{
+  font-size: $font-size-base * 0.6;
+}
+
+.fs-9{
+  font-size: $font-size-base * 0.5;
+}
+
+.main-layout{
+  background-color: $gray-100;
+}
+
+.footer-history-update{
+  max-height: 200px;
+  .vstack{
+    border-bottom: 2px solid $gray3;
+    &:last-child{
+      border-bottom: 0;
+    }
+  }
+}
+
+.create-col{
+  @include responsive-max(1200px) {
+    border-right: 0 !important;
+  }
+}
+
+.justify-items-center{
+  justify-items: center;
+}
+
+.custom-checkbox-table .form-check-input {
+  appearance: none; /* Hapus default */
+  width: 20px;
+  height: 20px;
+  border: 1px solid $gray7 !important;
+  border-radius: 3px;
+  background-color: #fff !important;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease-in-out;
+}
+
+/* Saat dicentang */
+.custom-checkbox-table .form-check-input:checked {
+  background-color: #000 !important; /* Hitam */
+  border-color: #000 !important;
+  position: relative;
+}
+
+/* Paksa centang putih pakai SVG */
+.custom-checkbox-table .form-check-input:checked::after {
+  content: "";
+  width: 15px;
+  height: 15px;
+  // background-image: url("../image/Check.png");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white' width='18px' height='18px'%3E%3Cpath d='M9 16.2l-3.5-3.5-1.5 1.5 5 5 12-12-1.5-1.5z'/%3E%3C/svg%3E");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  // position: absolute;
+  // left: 50%;
+  // top: 50%;
+  // transform: translate(-50%, -50%);
+}
+
+/* Hilangkan efek highlight biru/ungu dari browser */
+.custom-checkbox-table .form-check-input:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.counter-container {
+  width: 110px; 
+  // display: flex;
+  // align-items: center;
+  input{
+    border-color: $gray4;
+  }
+  button {
+    border-color: $gray4;
+  }
+  
+  .disabled-btn {
+    background-color: $gray5 !important; // Warna sesuai dengan gambar sebelumnya
+    border-color: $gray4;
+    cursor: not-allowed;
+  }
+}
+
+.modal-confirmation{
+  .caption-text{
+    background-color: $gray2;
+    color: $gray8;
+  }
+}
+
+.form-check-input[type="radio"]{
+  border: 1px solid $gray7 !important;
+}
+
+.settings-header-bar {
+  border-bottom: 2px solid #dee2e6;
+}
+
+.settings-content-area {
+  min-height: 400px;
+}
+
+.content-placeholder {
+  border: 2px dashed #dee2e6;
+  transition: all 0.3s ease;
+}
+
+.content-placeholder:hover {
+  border-color: #007bff;
+  background-color: #f8f9fa !important;
+}
+
+.nav-tabs .nav-link {
+  font-weight: 500;
+  color: #6c757d;
+  border: 1px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.nav-tabs .nav-link:hover {
+  border-color: #e9ecef #e9ecef #dee2e6;
+  color: #495057;
+}
+
+.nav-tabs .nav-link.active {
+  color: #495057;
+  background-color: #fff;
+  border-color: #dee2e6 #dee2e6 #fff;
+  font-weight: 600;
+}
+
+.settings-actions {
+  border-top: 1px solid #dee2e6;
+  padding-top: 1rem;
+}
+
+.preview-lampiran-container {
+    padding: 1rem 0;
+}
+
+.document-item {
+    background-color: #f8f9fa;
+    transition: all 0.3s ease;
+    height: 100%;
+}
+
+.document-item:hover {
+    background-color: #e9ecef;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.image-preview-container img {
+    border: 2px solid #dee2e6;
+    transition: border-color 0.3s ease;
+}
+
+.image-preview-container img:hover {
+    border-color: #007bff;
+}
+
+.file-download-container {
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 1rem;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    border-radius: 8px;
+}

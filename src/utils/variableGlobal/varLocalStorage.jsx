@@ -1,0 +1,13 @@
+export const TOKEN_KEY = 'tkn';
+export const REFRESH_TOKEN_KEY = 'rftkn';
+export const INIT_SSO = 'init';
+export const STEP_FUNCTION_REQUEST = 'sfr'
+export const ROOM_SELECTION_DATA = 'rsd2'
+export const TENANT_SELECTION_DATA = 'tsd'
+export const PRODUCT_SELECTION_DATA = 'psd'
+export const ORDER_SUMMARY_DATA = 'osd'
+export const ORDER_EDIT_OR_VIEW_DATA = 'oevd'
+export const BULK_LIST_DATA = 'bld'
+export const BULK_STEP_FUNCTION_REQUEST = 'bsfr'
+export const BULK_PRODUCT_SELECTION_DATA = 'bpsd'
+export const BULK_ORDER_SUMMARY_DATA = 'bosd'

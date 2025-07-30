@@ -1,0 +1,22 @@
+// here custom style
+@import "src/assets/style/variable.scss";
+
+#list-product-package-page{
+  .custom-style{
+    color: red;
+  }
+}
+
+#create-product-package-page, #edit-product-package-page{
+  .header-title{
+    background-color: $gray2;
+  }
+  .rdt_TableCell{
+    padding: 0 1%;
+    justify-content: center;
+    text-align: center;
+  }
+  .right-side-col{
+    max-height: 74vh;
+  }
+}

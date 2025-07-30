@@ -1,0 +1,66 @@
+// here custom style
+@import "src/assets/style/variable.scss";
+
+#edit-order-history-list-page{
+  .header-title{
+    background-color: $gray2;
+  }
+  .text-value{
+    color: $gray4;
+  }
+  .list-menu{
+    background-color: $gray2; /* Warna abu-abu untuk ruangan tidak terpilih */
+    .product-item {
+      position: relative;
+      transition: opacity 0.3s ease-in-out;
+    }
+    
+    .product-item.out-of-stock {
+      opacity: 0.6; // Membuat item tampak redup
+      pointer-events: none; // Nonaktifkan interaksi
+    }
+    
+    .product-item .badge {
+      font-size: 0.8rem;
+      padding: 5px 10px;
+    }
+    
+    .product-item .product-image {
+      position: relative;
+    }
+    
+    .product-item .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(255, 255, 255, 0.7);
+      border-radius: 5px;
+    }
+    .product-item .desc-add-on{
+      color: $gray6;
+    }    
+  }
+  .scrollable-order-preview-section{
+    max-height: calc(100vh - 370px); // Adjust based on header/footer height
+    // overflow-y: auto;
+    // padding: 10px;
+
+    @media (max-width: $xl) { // Large screens
+      max-height: calc(100vh - 350px);
+    }
+
+    @media (max-width: $lg) { // Medium screens (tablets)
+      max-height: calc(100vh - 320px);
+    }
+
+    @media (max-width: $med) { // Small screens (mobile)
+      max-height: calc(100vh - 300px);
+    }
+
+    @media (max-width: $sm) { // Extra small screens
+      max-height: calc(100vh - 280px);
+    }
+  }
+}

@@ -1,0 +1,63 @@
+@import "bootstrap/scss/functions";
+
+/* make the customizations */
+$primary: #097CFF;
+$danger: #FF3D3D;
+$danger-bg: #ffc3c3; 
+$success: #00CA0D;
+$success-bg: #CBFFCE;
+$secondary: #a8a8a8;
+$secondary-text: #9C8B87;
+$warning: #EBF451;
+$warning2: #C0C843;
+$warning3: #FFA500;
+$light: #e5e5e8;
+$gray2: #EEEEEE;
+$gray2-text: #C5C5C5;
+$gray3: #D8D8D8;
+$gray4: #A8A8A8;
+$gray5: #E8E8E8;
+$gray6: #8A8A8A;
+$gray7: #ACACAC;
+$gray8: #807c7c;
+$gray9: #F1F1F1;
+$gray10: #B1B1B1;
+$bs-link-color: #000000;
+$breadcrumb-divider-color: #fff;
+$breadcrumb-active-color: #fff;
+$input-border-color:#000000;
+$input-placeholder-color:#AFAFAF;
+$form-select-indicator-color:#000000;
+$form-select-indicator: url('../image/dropdown.png');
+$font-weight-base: 600;
+$modal-content-border-radius: 20px;
+
+// $grid-breakpoints: (
+//   xs: 0,
+//   sm: 576px,
+//   md: 768px,
+//   lg: 992px,
+//   xl: 1440px,
+//   xxl: 1920px
+// );
+
+$xl: 1440px; // 4k and hi-res desktop
+$lg: 992px; // 1080 and hi-res laptops
+$med: 768px; // hi-res tablets and low-res laptops
+$sm: 576px; // mobile and low-res tablets
+$xs: 0px;
+
+@mixin responsive($query) {
+  @media ( min-width: $query ) {
+      @content;
+  }
+}
+
+@mixin responsive-max($query) {
+  @media ( max-width: $query ) {
+      @content;
+  }
+}
+
+@import "bootstrap/scss/_variables.scss";
+@import "bootstrap/scss/_variables-dark.scss";

@@ -1,0 +1,1 @@
+//here you can create shared function per page

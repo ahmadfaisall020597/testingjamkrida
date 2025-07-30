@@ -1,0 +1,18 @@
+// here custom style
+@import "src/assets/style/variable.scss";
+
+#list-product-promo-page{
+  .custom-style{
+    color: red;
+  }
+}
+
+#create-product-promo-page{
+  .header-title{
+    background-color: $gray2;
+  }
+  .rdt_TableCell{
+    padding: 0 1%;
+    justify-content: center;
+  }
+}

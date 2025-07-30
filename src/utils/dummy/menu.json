@@ -1,0 +1,81 @@
+[
+  {
+    "name": "Mitra",
+    "path": "/",
+    "badge": null,
+    "sequence": 1,
+    "children": [
+       {
+        "name": "Home",
+        "path": "/mitra/dashboard-mitra",
+        "badge": null,
+        "children": null,
+        "sequence": 1
+      },
+      {
+        "name": "Penjaminan",
+        "path": "/mitra/penjaminan-mitra",
+        "badge": null,
+        "children": null,
+        "sequence": 1
+      },
+      {
+        "name": "Claim",
+        "path": "/mitra/claim",
+        "badge": null,
+        "children": null,
+        "sequence": 1
+      },
+      {
+        "name": "Subrogasi",
+        "path": "/mitra/subrogasi",
+        "badge": null,
+        "children": null,
+        "sequence": 1
+      }
+    ]
+  },
+  {
+    "name": "Portal Admin",
+    "path": "/",
+    "badge": null, 
+    "sequence": 1,
+    "children": [
+      {
+        "name": "Home",
+        "path": "/portal-admin/dashboard-admin",
+        "badge": null,
+        "children": null,
+        "sequence": 1
+      },
+      {
+        "name": "User Mitra",
+        "path": "/portal-admin/user-mitra",
+        "badge": null,
+        "children": null,
+        "sequence": 1
+      },
+      {
+        "name": "User",
+        "path": "/portal-admin/user",
+        "badge": null,
+        "children": null,
+        "sequence": 1
+      },
+      {
+        "name": "Settings",
+        "path": "/portal-admin/settings",
+        "badge": null,
+        "children": null,
+        "sequence": 1
+      },
+      {
+        "name": "Language",
+        "path": "/portal-admin/language",
+        "badge": null,
+        "children": null,
+        "sequence": 1
+      }
+    ]
+  }
+]

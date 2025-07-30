@@ -1,0 +1,14 @@
+// here custom style
+@import "src/assets/style/variable.scss";
+
+#create-lookup-value-page{
+  .header-title{
+    background-color: $gray2;
+  }
+}
+
+#edit-lookup-value-page{
+  .header-title{
+    background-color: $gray2;
+  }
+}
