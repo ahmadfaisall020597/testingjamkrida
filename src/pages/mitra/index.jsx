@@ -38,37 +38,36 @@ const DashboardPageMitra = () => {
 		script.async = true;
 		script.charset = "UTF-8";
 		script.setAttribute("crossorigin", "*");
-
-		script.onload = () => {
-			console.log("Tawk.to script loaded");
-
-			if (window.Tawk_API) {
-				// Tunggu hingga widget selesai dimuat
-				window.Tawk_API.onLoad = function () {
-					console.log("Tawk.to widget loaded");
-
-					if (dataLogin?.data?.name && dataLogin?.data?.email) {
-						window.Tawk_API.setAttributes(
-							{
-								name: dataLogin.data.name,
-								email: dataLogin.data.email,
-							},
-							function (error) {
-								if (error) {
-									console.error("Tawk setAttributes error:", error);
-								} else {
-									console.log("Tawk.to visitor info set:", dataLogin.data.name);
-								}
-							}
-						);
-					}
-				};
-			}
-		};
-
 		document.body.appendChild(script);
 
+		const interval = setInterval(() => {
+			if (
+				window.Tawk_API &&
+				window.Tawk_API.setAttributes &&
+				dataLogin?.data?.name &&
+				dataLogin?.data?.email
+			) {
+				console.log("Tawk.to ready, setting attributes...");
+				console.log("masuk name :", dataLogin?.data?.name);
+				window.Tawk_API.setAttributes(
+					{
+						name: dataLogin.data.name,
+						email: dataLogin.data.email,
+					},
+					function (error) {
+						if (error) {
+							console.error("Tawk setAttributes error:", error);
+						} else {
+							console.log("Tawk.to visitor info set:", dataLogin.data.name);
+						}
+					}
+				);
+				clearInterval(interval);
+			}
+		}, 1000);
+
 		return () => {
+			clearInterval(interval);
 			document.body.removeChild(script);
 		};
 	}, [dataLogin]);
