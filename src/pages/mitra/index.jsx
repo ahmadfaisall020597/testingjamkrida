@@ -40,13 +40,16 @@ const DashboardPageMitra = () => {
 		script.async = true;
 		script.charset = "UTF-8";
 		script.setAttribute("crossorigin", "*");
-		document.body.appendChild(script);
 
 		script.onload = () => {
-			// Polling untuk menunggu elemen muncul
+			console.log("✅ Script Tawk.to berhasil dimuat");
+
+			let counter = 0;
 			const interval = setInterval(() => {
 				const chatContainer = document.querySelector("#tawkchat-container");
 				if (chatContainer) {
+					console.log("✅ Tawk chat container ditemukan");
+
 					chatContainer.style.maxWidth = "350px";
 					chatContainer.style.maxHeight = "500px";
 					chatContainer.style.bottom = "20px";
@@ -55,12 +58,26 @@ const DashboardPageMitra = () => {
 					chatContainer.style.overflow = "hidden";
 					chatContainer.style.zIndex = "9999";
 
-					clearInterval(interval); // Stop polling setelah sukses
+					clearInterval(interval); // Stop polling
+				} else {
+					console.log("⏳ Menunggu elemen #tawkchat-container... (" + counter + ")");
 				}
-			}, 500); // Cek setiap 500ms
+
+				counter++;
+				if (counter > 20) {
+					console.warn("⚠️ Gagal menemukan elemen #tawkchat-container setelah 10 detik");
+					clearInterval(interval);
+				}
+			}, 500);
 		};
 
-		// Cleanup
+		script.onerror = () => {
+			console.error("❌ Gagal memuat script Tawk.to");
+		};
+
+		document.body.appendChild(script);
+
+		// Cleanup saat komponen unmount
 		return () => {
 			document.body.removeChild(script);
 		};
