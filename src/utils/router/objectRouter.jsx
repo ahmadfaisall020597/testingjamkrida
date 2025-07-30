@@ -13,9 +13,9 @@
 // import { pathMitra } from "../variableGlobal/varPath";
 import { store } from "../store/combineReducers";
 
-const translationData = store.getState().language.translationData;
-const code_lang = store.getState().language.selectedLanguage;
-const translateTitle = translationData[code_lang];
+// const translationData = store.getState().language.translationData;
+// const code_lang = store.getState().language.selectedLanguage;
+// const translateTitle = translationData[code_lang];
 
 const objectRouter = {
 	// this template
@@ -227,7 +227,7 @@ const objectRouter = {
 	// 	privileges: "R"
 	// },
 	penjaminanMitraPage: {
-		title: translateTitle.penjaminanMitra.text1 || "Penjaminan Mitra",
+		title: "Penjaminan Mitra",
 		path: "/mitra/penjaminan-mitra",
 		stringElement: "PenjaminanMitraPage",
 		index: false,
